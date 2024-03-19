@@ -1,16 +1,16 @@
 import streamlit as st
 
 def main():
-    st.title("User Information")
+    st.title("Name and Age Printer")
 
-    # Get user input
+    # Input fields for name and age
     name = st.text_input("Enter your name:")
-    age = st.number_input("Enter your age:", min_value=0, max_value=150, step=1)
-    gender = st.selectbox("Select your gender:", ["Male", "Female", "Other"])
+    age = st.number_input("Enter your age:", min_value=0, step=1)
 
-    # Display message
-    if st.button("Submit"):
-        st.write(f"Your name is {name}, your age is {age}, and you are {gender}.")
+    # Displaying the message
+    if name and age:
+        st.write(f"Your name is {name} and your age is {age}.")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
+
